@@ -17,39 +17,44 @@ Represents the size of an image as returned by getType.
 
 ### `createEmpty : () -> Task x NativeImage`
 Request an empty `NativeImage` instance.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#nativeimagecreateempty)
 
 
 ### `createFromPath : String -> Task x NativeImage`
 Request a `NativeImage` from the file specified by the given path. If no image
 is found at that path, returns an empty `NativeImage`.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#nativeimagecreatefrompathpath)
 
 ### `createFromBuffer : Buffer -> Task x NativeImage`
 Request a `NativeImage` from the data in the given `Buffer`. If the input is
 not found to produce a valid image, returns an empty `NativeImage`.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#nativeimagecreatefrombufferbuffer-scalefactor)
+
+### `createFromDataURL : String -> Task x NativeImage`
+Request a `NativeImage` from the data in the given data URL. If the data URL
+does not encode a valid image, returns an empty `NativeImage`.
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#nativeimagecreatefromdataurldataurl)
 
 ### `toPng : NativeImage -> Buffer`
 Returns a `NativeImage`'s contents as a `Buffer` encoded as a PNG.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#imagetopng)
 
 ### `toJpeg : Int -> NativeImage -> Buffer`
 Returns a `NativeImage`'s contents as a `Buffer` encoded as a JPEG with the
 given quality.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#imagetojpegquality)
 
 ### `toDataURL : NativeImage -> String`
 Returns a `NativeImage`'s contents as a base64 PNG data URL string.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#imagetodataurl)
 
 ### `isEmpty : NativeImage -> Bool`
 Returns whether the given `NativeImage` has any content.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#imageisempty)
 
 ### `getSize : NativeImage -> Size`
 Returns the size of the `NativeImage`.
-[electron docs](https://google.com)
+[electron docs](https://github.com/atom/electron/blob/master/docs/api/native-image.md#imagegetsize)
 
 ## Contributing
 
